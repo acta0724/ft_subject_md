@@ -60,29 +60,29 @@ ft_printf/
 
 ### `flutter-to-swift`
 
-`pdf-to-exercises` で生成したFlutter向けMarkdownをSwiftUI向けに変換します。
-Dartのコードサンプルはコメントとして残し、Swiftのコードを新たに生成します。
+42のFlutter向け課題PDFをexerciseごとに分割し、そのままSwiftUI向けに変換します。
+`pdf-to-exercises` を別途実行する必要はありません。
 
 ```
-/ft-subject-md:flutter-to-swift <MDファイルまたはディレクトリのパス>
+/ft-subject-md:flutter-to-swift <PDFファイルまたはディレクトリのパス>
 ```
 
 **例:**
 
 ```bash
-# ディレクトリ内の全exerciseを変換
-/ft-subject-md:flutter-to-swift ~/42tokyo/ft_subject_md/mobile-0/
+/ft-subject-md:flutter-to-swift ~/42tokyo/mobile-0.pdf
+/ft-subject-md:flutter-to-swift ~/42tokyo/
 ```
 
 **出力例:**
 
 ```
 mobile-0/
-├── CLAUDE.md                              ← 変換対象外
-├── ex00_a_basic_display.md
-├── ex00_a_basic_display_swift.md          ← 生成
+├── CLAUDE.md                              ← 共通部分（SwiftUI変換対象外）
+├── ex00_a_basic_display.md               ← Flutter版
+├── ex00_a_basic_display_swift.md         ← SwiftUI版
 ├── ex01_say_hello_to_the_world.md
-├── ex01_say_hello_to_the_world_swift.md   ← 生成
+├── ex01_say_hello_to_the_world_swift.md
 └── ...
 ```
 
