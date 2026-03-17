@@ -1,0 +1,12 @@
+{
+  "name": "ft-subject-md",
+  "description": "42の課題PDFをMarkdownに変換するスキル集",
+  "version": "0.1.0",
+  "author": {
+    "name": "iwasakatsuya"
+  },
+  "homepage": "https://github.com/iwasakatsuya/ft_subject_md",
+  "repository": "https://github.com/iwasakatsuya/ft_subject_md",
+  "license": "MIT",
+  "keywords": ["42", "42tokyo", "pdf", "markdown", "subject"]
+}
