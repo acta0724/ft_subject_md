@@ -58,6 +58,34 @@ ft_printf/
     └── ...
 ```
 
+### `flutter-to-swift`
+
+`pdf-to-exercises` で生成したFlutter向けMarkdownをSwiftUI向けに変換します。
+Dartのコードサンプルはコメントとして残し、Swiftのコードを新たに生成します。
+
+```
+/ft-subject-md:flutter-to-swift <MDファイルまたはディレクトリのパス>
+```
+
+**例:**
+
+```bash
+# ディレクトリ内の全exerciseを変換
+/ft-subject-md:flutter-to-swift ~/42tokyo/ft_subject_md/mobile-0/
+```
+
+**出力例:**
+
+```
+mobile-0/
+├── CLAUDE.md                              ← 変換対象外
+├── ex00_a_basic_display.md
+├── ex00_a_basic_display_swift.md          ← 生成
+├── ex01_say_hello_to_the_world.md
+├── ex01_say_hello_to_the_world_swift.md   ← 生成
+└── ...
+```
+
 ## ディレクトリ構成
 
 ```
@@ -67,8 +95,10 @@ ft_subject_md/
 ├── skills/
 │   ├── pdf-to-md/
 │   │   └── SKILL.md                 # PDFを1つのMarkdownに変換
-│   └── pdf-to-exercises/
-│       └── SKILL.md                 # PDFをexerciseごとに分割
+│   ├── pdf-to-exercises/
+│   │   └── SKILL.md                 # PDFをexerciseごとに分割
+│   └── flutter-to-swift/
+│       └── SKILL.md                 # Flutter向けMDをSwiftUI向けに変換
 └── README.md
 ```
 
